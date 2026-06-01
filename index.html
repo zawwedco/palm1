@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>هاسيندا راس الحكمة | بالم هيلز</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Cairo:wght@300;400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,300;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue-1:#EBF7FC;
+  --blue-2:#C3E8F5;
+  --blue-3:#7DCAE8;
+  --blue-4:#4BBBD6;
+  --blue-5:#1A9AC0;
+  --blue-6:#0D7599;
+  --blue-dark:#064E6A;
+  --navy:#0A2A3E;
+  --white:#ffffff;
+  --off-white:#F7FBFD;
+  --text-dark:#0D1F2D;
+  --text-mid:#2E5468;
+  --text-soft:#5B8FA8;
+  --gold:#C9A44A;
+  --gold-light:#E8C97A;
+  --shadow-sm:0 2px 12px rgba(10,60,90,.07);
+  --shadow-md:0 8px 32px rgba(10,60,90,.12);
+  --shadow-lg:0 20px 60px rgba(10,60,90,.18);
+  --r:12px;
+  --font-ar:'Tajawal',sans-serif;
+  --font-en:'Outfit',sans-serif;
+  --font-display:'Cormorant Garamond',serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-ar);background:var(--white);color:var(--text-dark);overflow-x:hidden}
+[data-lang="en"] body,[data-lang="en"] *{font-family:var(--font-en)}
+[data-lang="en"]{direction:ltr}
+[data-lang="ar"]{direction:rtl}
+
+/* ─── UTILITY ─── */
+.container{max-width:1260px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-weight:700;cursor:pointer;transition:all .3s ease;text-decoration:none;font-size:15px;border:none;outline:none}
+.btn-primary{background:linear-gradient(135deg,var(--blue-4),var(--blue-5));color:#fff;box-shadow:0 4px 20px rgba(77,187,214,.4)}
+.btn-primary:hover{background:linear-gradient(135deg,var(--blue-5),var(--blue-6));transform:translateY(-2px);box-shadow:0 8px 28px rgba(77,187,214,.5)}
+.btn-outline{background:transparent;border:2px solid var(--blue-4);color:var(--blue-5)}
+.btn-outline:hover{background:var(--blue-4);color:#fff}
+.btn-white{background:#fff;color:var(--blue-5)}
+.btn-white:hover{background:var(--blue-1);transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#fff;box-shadow:0 4px 20px rgba(201,164,74,.4)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,164,74,.5)}
+.section-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--blue-5);background:var(--blue-1);padding:6px 16px;border-radius:50px;margin-bottom:16px}
+.section-title{font-size:clamp(26px,3.5vw,42px);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:12px}
+.section-sub{font-size:16px;color:var(--text-mid);line-height:1.8;max-width:640px}
+[data-lang="en"] .section-title{font-family:var(--font-display);font-weight:600}
+.hidden{display:none!important}
+
+/* ─── LANGUAGE CONTENT ─── */
+.ar{display:block}.en{display:none}
+[data-lang="en"] .ar{display:none!important}
+[data-lang="en"] .en{display:block}
+
+/* ─── NAV ─── */
+#nav{position:fixed;top:0;inset-inline:0;z-index:1000;padding:0 24px;transition:all .4s ease;background:transparent}
+#nav.scrolled{background:rgba(7,30,48,.96);backdrop-filter:blur(16px);box-shadow:0 4px 30px rgba(0,0,0,.3)}
+.nav-inner{max-width:1260px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.nav-logo img{height:40px;filter:brightness(0) invert(1);transition:all .3s}
+#nav.scrolled .nav-logo img{filter:brightness(0) invert(1)}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.9);text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px;border-radius:8px;transition:all .3s;white-space:nowrap}
+.nav-links a:hover{background:rgba(255,255,255,.15);color:#fff}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang-toggle{background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.4);color:#fff;border-radius:50px;padding:6px 16px;font-size:13px;font-weight:700;cursor:pointer;transition:all .3s;letter-spacing:1px}
+.lang-toggle:hover{background:rgba(255,255,255,.25)}
+.nav-cta{background:var(--blue-4);color:#fff;border-radius:50px;padding:9px 22px;font-size:13px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:6px;transition:all .3s}
+.nav-cta:hover{background:var(--blue-5)}
+.nav-cta svg{width:16px;height:16px}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.nav-hamburger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:all .3s}
+@media(max-width:900px){
+  .nav-links{display:none;position:fixed;top:72px;inset-inline:0;background:rgba(7,30,48,.98);flex-direction:column;padding:20px;gap:4px;backdrop-filter:blur(20px)}
+  .nav-links.open{display:flex}
+  .nav-links a{width:100%;text-align:center;padding:12px}
+  .nav-hamburger{display:block}
+}
+
+/* ─── HERO ─── */
+#hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(5,20,35,.75) 0%,rgba(10,40,60,.55) 50%,rgba(5,20,35,.80) 100%)}
+.hero-content{position:relative;z-index:2;max-width:1260px;margin:0 auto;padding:0 24px;width:100%;display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center}
+.hero-text{color:#fff}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:8px 18px;margin-bottom:24px;font-size:13px;font-weight:600;color:rgba(255,255,255,.95)}
+.hero-badge .dot{width:8px;height:8px;background:#4BF0A0;border-radius:50%;animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+.hero-title{font-size:clamp(38px,5.5vw,72px);font-weight:800;line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
+[data-lang="en"] .hero-title{font-family:var(--font-display);font-weight:500;font-style:italic;font-size:clamp(40px,5.5vw,80px)}
+.hero-subtitle{font-size:clamp(14px,1.5vw,18px);color:rgba(255,255,255,.8);line-height:1.8;margin-bottom:32px;max-width:500px}
+.hero-stats{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.hero-stat{background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:16px 20px;min-width:130px}
+.hero-stat-num{font-size:22px;font-weight:800;color:#fff;display:block}
+.hero-stat-label{font-size:11px;color:rgba(255,255,255,.7);display:block;margin-top:2px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+/* Hero Form */
+.hero-form-card{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-radius:20px;padding:32px 28px;box-shadow:var(--shadow-lg)}
+.hero-form-title{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.hero-form-sub{font-size:13px;color:var(--text-mid);margin-bottom:22px;line-height:1.6}
+.form-field{margin-bottom:14px}
+.form-field label{display:block;font-size:12px;font-weight:700;color:var(--text-mid);margin-bottom:5px;letter-spacing:.5px}
+.form-field input,.form-field select{width:100%;padding:12px 14px;border:1.5px solid #D0E8F2;border-radius:10px;font-size:14px;font-family:inherit;color:var(--text-dark);background:#fff;transition:border-color .3s;outline:none}
+.form-field input:focus,.form-field select:focus{border-color:var(--blue-4);box-shadow:0 0 0 3px rgba(75,187,214,.15)}
+.hero-form-card .btn{width:100%;justify-content:center;font-size:15px;padding:15px}
+.hero-form-privacy{text-align:center;font-size:11px;color:var(--text-soft);margin-top:10px}
+
+@media(max-width:900px){
+  .hero-content{grid-template-columns:1fr;padding-top:100px;padding-bottom:40px}
+  .hero-form-card{display:none}
+}
+
+/* ─── STATS RIBBON ─── */
+#stats-ribbon{background:linear-gradient(90deg,var(--blue-dark),var(--navy));padding:20px 24px}
+.ribbon-inner{max-width:1260px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap}
+.ribbon-item{display:flex;align-items:center;gap:12px;padding:8px 36px;flex:1;min-width:220px;border-inline-end:1px solid rgba(255,255,255,.15);justify-content:center;text-align:center}
+.ribbon-item:last-child{border-inline-end:none}
+.ribbon-icon{width:42px;height:42px;background:rgba(75,187,214,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ribbon-icon svg{width:22px;height:22px;color:var(--blue-3)}
+.ribbon-text-num{display:block;font-size:20px;font-weight:800;color:#fff}
+.ribbon-text-label{display:block;font-size:12px;color:rgba(255,255,255,.65);margin-top:1px}
+@media(max-width:700px){.ribbon-item{padding:12px 20px;border-inline-end:none;border-bottom:1px solid rgba(255,255,255,.1)}.ribbon-item:last-child{border-bottom:none}}
+
+/* ─── ABOUT PROJECT ─── */
+#about-project{padding:100px 24px;background:var(--white)}
+.about-grid{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-img-wrap{position:relative}
+.about-img-main{width:100%;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.about-img-main img{width:100%;height:420px;object-fit:cover}
+.about-img-badge{position:absolute;bottom:-24px;inset-inline-start:24px;background:#fff;border-radius:14px;padding:18px 24px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:14px}
+.badge-icon{width:48px;height:48px;background:var(--blue-1);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.badge-icon svg{width:26px;height:26px;color:var(--blue-5)}
+.badge-title{font-size:20px;font-weight:800;color:var(--navy)}
+.badge-sub{font-size:12px;color:var(--text-soft);margin-top:2px}
+.about-text{padding-bottom:24px}
+.feature-list{margin-top:28px;display:flex;flex-direction:column;gap:14px}
+.feature-item{display:flex;align-items:flex-start;gap:12px;padding:14px 18px;background:var(--blue-1);border-radius:12px;border-inline-start:3px solid var(--blue-4)}
+.feature-icon{width:36px;height:36px;background:var(--blue-2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.feature-icon svg{width:18px;height:18px;color:var(--blue-6)}
+.feature-item-title{font-size:14px;font-weight:700;color:var(--navy)}
+.feature-item-sub{font-size:13px;color:var(--text-mid);margin-top:2px;line-height:1.5}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px}.about-img-badge{position:static;margin-top:20px}}
+
+/* ─── PRICING ─── */
+#pricing{padding:100px 24px;background:var(--off-white)}
+.pricing-head{text-align:center;margin-bottom:56px}
+.pricing-head .section-sub{margin:0 auto}
+.units-grid{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.unit-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .4s ease;border:1.5px solid transparent;cursor:pointer}
+.unit-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--blue-3)}
+.unit-card.featured{border-color:var(--blue-4);position:relative}
+.unit-featured-badge{position:absolute;top:16px;inset-inline-end:16px;background:linear-gradient(135deg,var(--blue-4),var(--blue-5));color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:1px;z-index:1}
+.unit-img{height:200px;overflow:hidden}
+.unit-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.unit-card:hover .unit-img img{transform:scale(1.05)}
+.unit-body{padding:22px 20px}
+.unit-type{font-size:11px;font-weight:700;color:var(--blue-5);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.unit-name{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:14px}
+.unit-price-row{display:flex;align-items:flex-end;gap:6px;margin-bottom:14px}
+.unit-price{font-size:24px;font-weight:800;color:var(--blue-5)}
+.unit-price-label{font-size:12px;color:var(--text-soft);padding-bottom:3px}
+.unit-details{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.unit-detail-row{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-mid)}
+.unit-detail-row svg{width:16px;height:16px;color:var(--blue-4);flex-shrink:0}
+.unit-card .btn{width:100%;justify-content:center;padding:12px;font-size:14px}
+
+/* ─── WHY PALM HILLS ─── */
+#why{padding:100px 24px;background:var(--white)}
+.why-grid{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.why-cards{display:flex;flex-direction:column;gap:20px}
+.why-card{background:var(--blue-1);border-radius:16px;padding:24px;display:flex;align-items:flex-start;gap:18px;transition:all .3s;cursor:default}
+.why-card:hover{background:var(--blue-2);transform:translateX(-4px)}
+[data-lang="en"] .why-card:hover{transform:translateX(4px)}
+.why-card-icon{width:52px;height:52px;background:linear-gradient(135deg,var(--blue-3),var(--blue-4));border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(75,187,214,.35)}
+.why-card-icon svg{width:26px;height:26px;color:#fff}
+.why-card-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.why-card-text{font-size:14px;color:var(--text-mid);line-height:1.7}
+.why-image-stack{position:relative;height:500px}
+.why-img-1{position:absolute;top:0;inset-inline-end:0;width:75%;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.why-img-1 img{width:100%;height:320px;object-fit:cover}
+.why-img-2{position:absolute;bottom:0;inset-inline-start:0;width:65%;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md);border:4px solid #fff}
+.why-img-2 img{width:100%;height:220px;object-fit:cover}
+.company-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.c-stat{background:var(--off-white);border-radius:12px;padding:18px;text-align:center}
+.c-stat-num{font-size:26px;font-weight:800;color:var(--blue-5);display:block}
+.c-stat-label{font-size:12px;color:var(--text-soft);display:block;margin-top:3px}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr;gap:40px}.why-image-stack{height:340px}}
+
+/* ─── GALLERY ─── */
+#gallery{padding:100px 24px;background:var(--navy)}
+.gallery-head{text-align:center;margin-bottom:48px}
+.gallery-head .section-tag{background:rgba(75,187,214,.2);color:var(--blue-3)}
+.gallery-head .section-title{color:#fff}
+.gallery-head .section-sub{color:rgba(255,255,255,.65);margin:0 auto}
+.gallery-grid{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:220px 220px;gap:12px}
+.gallery-item{border-radius:12px;overflow:hidden;cursor:pointer;position:relative}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-item .overlay{position:absolute;inset:0;background:rgba(10,30,50,.3);opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center}
+.gallery-item:hover .overlay{opacity:1}
+.overlay svg{width:36px;height:36px;color:#fff}
+.gallery-item:nth-child(1){grid-column:1/3;grid-row:1/2}
+.gallery-item:nth-child(2){grid-column:3/4}
+.gallery-item:nth-child(3){grid-column:4/5}
+.gallery-item:nth-child(4){grid-column:1/2}
+.gallery-item:nth-child(5){grid-column:2/4}
+.gallery-item:nth-child(6){grid-column:4/5}
+@media(max-width:900px){
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:8px}
+  .gallery-item{grid-column:auto!important;grid-row:auto!important;height:180px}
+}
+
+/* ─── LOCATION ─── */
+#location{padding:100px 24px;background:var(--off-white)}
+.location-grid{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.location-map-wrap{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);height:400px;background:var(--blue-2);display:flex;align-items:center;justify-content:center;position:relative}
+.map-placeholder{position:relative;width:100%;height:100%}
+.map-placeholder img{width:100%;height:100%;object-fit:cover}
+.map-pin-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.map-pin{background:var(--blue-5);color:#fff;border-radius:50px;padding:10px 20px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.map-pin svg{width:18px;height:18px}
+.distance-list{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.distance-item{display:flex;align-items:center;gap:14px;padding:14px 18px;background:#fff;border-radius:12px;box-shadow:var(--shadow-sm)}
+.distance-km{font-size:20px;font-weight:800;color:var(--blue-5);min-width:52px}
+.distance-label{font-size:14px;color:var(--text-dark);font-weight:600}
+.distance-sub{font-size:12px;color:var(--text-soft);margin-top:2px}
+.dist-dot{width:10px;height:10px;background:var(--blue-3);border-radius:50%;flex-shrink:0}
+@media(max-width:900px){.location-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ─── REGISTER FORM ─── */
+#register{padding:100px 24px;background:linear-gradient(135deg,var(--navy) 0%,var(--blue-dark) 100%);position:relative;overflow:hidden}
+#register::before{content:'';position:absolute;top:-50%;inset-inline-end:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(75,187,214,.15) 0%,transparent 70%);pointer-events:none}
+.register-grid{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.register-text{color:#fff}
+.register-text .section-tag{background:rgba(75,187,214,.2);color:var(--blue-3)}
+.register-text .section-title{color:#fff}
+.register-text .section-sub{color:rgba(255,255,255,.7)}
+.register-features{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.reg-feature{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.85);font-size:14px}
+.reg-feature svg{width:18px;height:18px;color:var(--blue-3);flex-shrink:0}
+.register-form{background:rgba(255,255,255,.07);backdrop-filter:blur(20px);border:1.5px solid rgba(255,255,255,.15);border-radius:24px;padding:36px 32px}
+.register-form .form-field label{color:rgba(255,255,255,.8)}
+.register-form .form-field input,.register-form .form-field select{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
+.register-form .form-field input::placeholder{color:rgba(255,255,255,.4)}
+.register-form .form-field select option{color:var(--text-dark);background:#fff}
+.register-form .form-field input:focus,.register-form .form-field select:focus{border-color:var(--blue-3);background:rgba(255,255,255,.15)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.register-form .btn{width:100%;justify-content:center;font-size:16px;padding:16px}
+.form-footer-note{text-align:center;font-size:11px;color:rgba(255,255,255,.45);margin-top:12px}
+@media(max-width:900px){.register-grid{grid-template-columns:1fr;gap:48px}.form-row{grid-template-columns:1fr}}
+
+/* ─── PROJECTS MAP SECTION ─── */
+#projects-map{padding:80px 24px;background:var(--white)}
+.pm-inner{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:start}
+.pm-map{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-md)}
+.pm-map img{width:100%;height:480px;object-fit:cover}
+.pm-regions{display:flex;flex-direction:column;gap:20px}
+.pm-region-title{font-size:13px;font-weight:700;color:var(--blue-5);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.pm-region-title::after{content:'';flex:1;height:1px;background:var(--blue-2)}
+.pm-region-list{display:flex;flex-wrap:wrap;gap:6px}
+.pm-tag{font-size:12px;padding:5px 12px;background:var(--blue-1);color:var(--text-mid);border-radius:50px;font-weight:500}
+@media(max-width:900px){.pm-inner{grid-template-columns:1fr}}
+
+/* ─── FOOTER ─── */
+#footer{background:var(--navy);padding:64px 24px 32px;color:rgba(255,255,255,.7)}
+.footer-grid{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand img{height:36px;filter:brightness(0) invert(1);opacity:.9;margin-bottom:16px}
+.footer-brand p{font-size:13px;line-height:1.8;color:rgba(255,255,255,.55);max-width:320px}
+.footer-contact{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.footer-contact a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);text-decoration:none;font-size:14px;transition:color .3s}
+.footer-contact a:hover{color:#fff}
+.footer-contact a svg{width:16px;height:16px;color:var(--blue-3);flex-shrink:0}
+.footer-col h4{font-size:13px;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:14px;transition:color .3s}
+.footer-links a:hover{color:var(--blue-3)}
+.footer-bottom{max-width:1260px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.35)}
+.footer-social{display:flex;gap:10px}
+.social-icon{width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;transition:all .3s;font-size:14px}
+.social-icon:hover{background:var(--blue-4);color:#fff}
+@media(max-width:700px){.footer-grid{grid-template-columns:1fr;gap:32px}}
+
+/* ─── FLOATING CTA ─── */
+.float-cta{position:fixed;bottom:28px;inset-inline-end:24px;z-index:999;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.float-btn{display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;transition:all .3s;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.float-wa{background:#25D366;color:#fff}
+.float-wa:hover{background:#1ebe5d;transform:translateY(-2px)}
+.float-call{background:var(--blue-5);color:#fff}
+.float-call:hover{background:var(--blue-6);transform:translateY(-2px)}
+.float-btn svg{width:20px;height:20px;flex-shrink:0}
+
+/* ─── LIGHTBOX ─── */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:9999;align-items:center;justify-content:center}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:90vh;border-radius:8px;object-fit:contain}
+.lightbox-close{position:absolute;top:20px;inset-inline-end:20px;background:rgba(255,255,255,.2);border:none;color:#fff;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s}
+.lightbox-close:hover{background:rgba(255,255,255,.4)}
+
+/* ─── ANIMATIONS ─── */
+.fade-in{opacity:0;transform:translateY(30px);transition:all .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in-left{opacity:0;transform:translateX(-30px);transition:all .7s ease}
+.fade-in-left.visible{opacity:1;transform:translateX(0)}
+.fade-in-right{opacity:0;transform:translateX(30px);transition:all .7s ease}
+.fade-in-right.visible{opacity:1;transform:translateX(0)}
+
+/* ─── SCROLL BAR ─── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--blue-1)}
+::-webkit-scrollbar-thumb{background:var(--blue-4);border-radius:3px}
+
+/* ─── SUCCESS MSG ─── */
+.success-msg{display:none;text-align:center;padding:20px;color:#4BF0A0;font-size:15px;font-weight:700}
+.success-msg svg{width:40px;height:40px;display:block;margin:0 auto 8px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/logoAr-1024x263.png" alt="Palm Hills Logo" id="nav-logo-img">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about-project" onclick="closeMenu()"><span class="ar">عن المشروع</span><span class="en">About</span></a></li>
+      <li><a href="#pricing" onclick="closeMenu()"><span class="ar">الأسعار</span><span class="en">Pricing</span></a></li>
+      <li><a href="#why" onclick="closeMenu()"><span class="ar">لماذا بالم هيلز</span><span class="en">Why Palm Hills</span></a></li>
+      <li><a href="#gallery" onclick="closeMenu()"><span class="ar">المعرض</span><span class="en">Gallery</span></a></li>
+      <li><a href="#location" onclick="closeMenu()"><span class="ar">الموقع</span><span class="en">Location</span></a></li>
+      <li><a href="#register" onclick="closeMenu()"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button>
+      <a href="tel:+201068439196" class="nav-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        <span>01068439196</span>
+      </a>
+      <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://palmhills.me/wp-content/uploads/2026/05/haicinda-ras-el-hekma.jpeg" alt="Hacienda Ras El Hekma">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span class="ar">🌊 إطلاق المشروع الآن · Launching Now</span>
+        <span class="en">🌊 Launching Now · N 31°02' · E 27°51'</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="ar">هاسيندا<br>راس الحكمة</span>
+        <span class="en">Hacienda<br>Ras El Hekma</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span class="ar">مدينة بالم هيلز الساحلية المتكاملة — ١٬٤٠٠ فدان على كيلو ٢٣٨ من الساحل الشمالي، بشاطئ ٤.٨ كم على المتوسط، في شراكة مع Miran Hills الإماراتية.</span>
+        <span class="en">Palm Hills' first integrated coastal city at KM 238 on the North Coast — 1,400 feddans, 4.8 km of Mediterranean shoreline, in partnership with UAE's Miran Hills.</span>
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num"><span class="ar">١٬٤٠٠</span><span class="en">1,400</span></span>
+          <span class="hero-stat-label"><span class="ar">فدان</span><span class="en">Feddans</span></span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">4.8 km</span>
+          <span class="hero-stat-label"><span class="ar">شاطئ متوسطي</span><span class="en">Shoreline</span></span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">86%</span>
+          <span class="hero-stat-label"><span class="ar">خضراء ومائية</span><span class="en">Green & Water</span></span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num"><span class="ar">٥٪</span><span class="en">5%</span></span>
+          <span class="hero-stat-label"><span class="ar">مقدم فقط</span><span class="en">Down Payment</span></span>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#register" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          <span class="ar">احجز الآن</span><span class="en">Book Now</span>
+        </a>
+        <a href="tel:+201068439196" class="btn btn-white">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          01068439196
+        </a>
+      </div>
+    </div>
+    <!-- Hero Form -->
+    <div class="hero-form-card">
+      <div class="hero-form-title"><span class="ar">سجّل بياناتك الآن</span><span class="en">Register Your Interest</span></div>
+      <div class="hero-form-sub"><span class="ar">فريق المبيعات سيتواصل معك في أقرب وقت بأفضل الفرص الاستثمارية</span><span class="en">Our sales team will contact you with the best investment opportunities</span></div>
+      <form id="heroForm" onsubmit="submitForm(event,'heroFormSuccess')">
+        <div class="form-field">
+          <label><span class="ar">الاسم كامل</span><span class="en">Full Name</span></label>
+          <input type="text" placeholder="" required>
+        </div>
+        <div class="form-field">
+          <label><span class="ar">رقم الموبايل</span><span class="en">Phone Number</span></label>
+          <input type="tel" placeholder="01xxxxxxxxx" required>
+        </div>
+        <div class="form-field">
+          <label><span class="ar">نوع الوحدة</span><span class="en">Unit Type</span></label>
+          <select>
+            <option value=""><span class="ar">اختر نوع الوحدة</span></option>
+            <option><span class="ar">شقة</span><span class="en">Apartment</span></option>
+            <option><span class="ar">شاليه</span><span class="en">Chalet</span></option>
+            <option><span class="ar">توين هاوس</span><span class="en">Twin House</span></option>
+            <option><span class="ar">فيلا</span><span class="en">Villa</span></option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <span class="ar">احجز وحدتك الآن</span><span class="en">Book Your Unit Now</span>
+        </button>
+      </form>
+      <div class="success-msg" id="heroFormSuccess">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span class="ar">تم استلام طلبك! سيتواصل معك فريقنا قريبًا</span><span class="en">Request received! Our team will contact you shortly.</span>
+      </div>
+      <p class="hero-form-privacy"><span class="ar">🔒 بياناتك في أمان تام — للتواصل المباشر فقط</span><span class="en">🔒 Your data is completely secure</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS RIBBON -->
+<div id="stats-ribbon">
+  <div class="ribbon-inner">
+    <div class="ribbon-item">
+      <div class="ribbon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+      <div>
+        <span class="ribbon-text-num"><span class="ar">تبدأ من ١١.٥ مليون</span><span class="en">From EGP 11.5M</span></span>
+        <span class="ribbon-text-label"><span class="ar">أسعار الإطلاق</span><span class="en">Starting Price</span></span>
+      </div>
+    </div>
+    <div class="ribbon-item">
+      <div class="ribbon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <div>
+        <span class="ribbon-text-num"><span class="ar">٥٪ مقدم فقط</span><span class="en">Only 5% Down</span></span>
+        <span class="ribbon-text-label"><span class="ar">تسهيلات السداد</span><span class="en">Payment Facility</span></span>
+      </div>
+    </div>
+    <div class="ribbon-item">
+      <div class="ribbon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div>
+        <span class="ribbon-text-num"><span class="ar">حتى ١٠ سنوات</span><span class="en">Up to 10 Years</span></span>
+        <span class="ribbon-text-label"><span class="ar">فترة التقسيط</span><span class="en">Installment Period</span></span>
+      </div>
+    </div>
+    <div class="ribbon-item">
+      <div class="ribbon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div>
+        <span class="ribbon-text-num"><span class="ar">تشطيب كامل</span><span class="en">Full Finish</span></span>
+        <span class="ribbon-text-label"><span class="ar">تكييفات + مطابخ</span><span class="en">ACs + Kitchens</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT PROJECT -->
+<section id="about-project">
+  <div class="about-grid fade-in">
+    <div class="about-img-wrap fade-in-left">
+      <div class="about-img-main">
+        <img src="https://palmhills.me/wp-content/uploads/2026/05/haicinda-ras-el-hekma.jpeg" alt="Hacienda Ras El Hekma">
+      </div>
+      <div class="about-img-badge">
+        <div class="badge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="badge-title"><span class="ar">كيلو ٢٣٨ — راس الحكمة</span><span class="en">KM 238 — Ras El Hekma</span></div>
+          <div class="badge-sub"><span class="ar">الساحل الشمالي · مصر</span><span class="en">North Coast · Egypt</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-text fade-in-right">
+      <span class="section-tag"><span class="ar">عن المشروع</span><span class="en">About The Project</span></span>
+      <h2 class="section-title"><span class="ar">مدينة ساحلية بمعايير عالمية</span><span class="en">A Coastal City by World Standards</span></h2>
+      <p class="section-sub"><span class="ar">هاسيندا راس الحكمة — أول مشروع بالم هيلز كمدينة ساحلية مسوّرة متكاملة. في شراكة استراتيجية مع Miran Hills الإماراتية لتقديم تجربة معيشة متوسطية راقية لا مثيل لها في مصر.</span><span class="en">Hacienda Ras El Hekma is Palm Hills' first integrated gated coastal city. A strategic partnership with UAE's Miran Hills to deliver an unmatched Mediterranean living experience in Egypt.</span></p>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+          <div>
+            <div class="feature-item-title"><span class="ar">٣ فنادق عالمية داخل المشروع</span><span class="en">3 International Hotels Within</span></div>
+            <div class="feature-item-sub"><span class="ar">علامات فندقية عالمية وخدمات 5 نجوم</span><span class="en">World-class hotel brands & 5-star services</span></div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg></div>
+          <div>
+            <div class="feature-item-title"><span class="ar">نادي Palm Hills الرياضي</span><span class="en">Palm Hills Sporting Club</span></div>
+            <div class="feature-item-sub"><span class="ar">رياضة، ترفيه، ولياقة بمعايير عالمية</span><span class="en">Sports, entertainment & wellness facilities</span></div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="feature-item-title"><span class="ar">مارينا دولية + مطار راس الحكمة</span><span class="en">International Marina + Airport</span></div>
+            <div class="feature-item-sub"><span class="ar">بنية تحتية عالمية تخدم المدينة طوال العام</span><span class="en">World-class infrastructure for year-round living</span></div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12m0 0l-4-4m4 4l4-4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg></div>
+          <div>
+            <div class="feature-item-title"><span class="ar">ريتيل ومطاعم — The Core</span><span class="en">Retail & Dining — The Core</span></div>
+            <div class="feature-item-sub"><span class="ar">محور تجاري ومطاعم راقية في قلب المشروع</span><span class="en">Commercial hub with premium dining in the heart of the project</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="pricing-head fade-in">
+    <span class="section-tag"><span class="ar">المجموعة السكنية</span><span class="en">Residential Collection</span></span>
+    <h2 class="section-title"><span class="ar">اختر وحدتك المثالية</span><span class="en">Choose Your Perfect Unit</span></h2>
+    <p class="section-sub"><span class="ar">بورتفوليو متنوع من الشقق، الشاليهات، التوين هاوس، والفلل — كل وحدة فُل فينش + تكييفات + مطابخ مجهّزة</span><span class="en">A diverse portfolio of apartments, chalets, twin houses, and villas — all fully finished with ACs & fitted kitchens</span></p>
+  </div>
+  <div class="units-grid">
+    <div class="unit-card fade-in">
+      <div class="unit-img">
+        <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Waters-1-.jpg" alt="Apartment">
+        <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+      </div>
+      <div class="unit-body">
+        <div class="unit-type"><span class="ar">شقة / ريزيدنس</span><span class="en">Apartment / Residence</span></div>
+        <div class="unit-name"><span class="ar">Beach Home</span><span class="en">Beach Home</span></div>
+        <div class="unit-price-row">
+          <div class="unit-price"><span class="ar">من ١١.٥ م</span><span class="en">From 11.5M</span></div>
+          <div class="unit-price-label"><span class="ar">جنيه</span><span class="en">EGP</span></div>
+        </div>
+        <div class="unit-details">
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span class="ar">١ – ٤ غرف نوم</span><span class="en">1–4 Bedrooms</span></div>
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="ar">تقسيط ١٠ سنوات</span><span class="en">10-Year Installments</span></div>
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span class="ar">فُل فينش + تكييفات</span><span class="en">Full Finish + ACs</span></div>
+        </div>
+        <a href="#register" class="btn btn-primary"><span class="ar">احجز الآن</span><span class="en">Book Now</span></a>
+      </div>
+    </div>
+    <div class="unit-card featured fade-in">
+      <div class="unit-featured-badge"><span class="ar">🔥 الأكثر طلبًا</span><span class="en">🔥 Most Popular</span></div>
+      <div class="unit-img">
+        <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-3.jpg" alt="Chalet">
+        <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+      </div>
+      <div class="unit-body">
+        <div class="unit-type"><span class="ar">شاليه</span><span class="en">Chalet</span></div>
+        <div class="unit-name"><span class="ar">Junior & Senior Chalet</span><span class="en">Junior & Senior Chalet</span></div>
+        <div class="unit-price-row">
+          <div class="unit-price"><span class="ar">من ٢٤ م</span><span class="en">From 24M</span></div>
+          <div class="unit-price-label"><span class="ar">جنيه</span><span class="en">EGP</span></div>
+        </div>
+        <div class="unit-details">
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span class="ar">جونيور وسينيور</span><span class="en">Junior & Senior</span></div>
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="ar">تقسيط ١٠ سنوات</span><span class="en">10-Year Installments</span></div>
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span class="ar">فُل فينش + مطبخ</span><span class="en">Full Finish + Kitchen</span></div>
+        </div>
+        <a href="#register" class="btn btn-primary"><span class="ar">احجز الآن</span><span class="en">Book Now</span></a>
+      </div>
+    </div>
+    <div class="unit-card fade-in">
+      <div class="unit-img">
+        <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-4.jpg" alt="Twin House">
+        <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+      </div>
+      <div class="unit-body">
+        <div class="unit-type"><span class="ar">توين هاوس</span><span class="en">Twin House</span></div>
+        <div class="unit-name">The Duo</div>
+        <div class="unit-price-row">
+          <div class="unit-price"><span class="ar">من ٤٤ م</span><span class="en">From 44M</span></div>
+          <div class="unit-price-label"><span class="ar">جنيه</span><span class="en">EGP</span></div>
+        </div>
+        <div class="unit-details">
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span class="ar">وحدة مزدوجة راقية</span><span class="en">Premium Twin Unit</span></div>
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="ar">تقسيط ١٠ سنوات</span><span class="en">10-Year Installments</span></div>
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span class="ar">تشطيب متكامل</span><span class="en">Fully Finished</span></div>
+        </div>
+        <a href="#register" class="btn btn-primary"><span class="ar">احجز الآن</span><span class="en">Book Now</span></a>
+      </div>
+    </div>
+    <div class="unit-card fade-in">
+      <div class="unit-img">
+        <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-West-North-Coast-2.jpg" alt="Villa">
+        <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+      </div>
+      <div class="unit-body">
+        <div class="unit-type"><span class="ar">فيلا فاخرة</span><span class="en">Luxury Villa</span></div>
+        <div class="unit-name"><span class="ar">Shoreline Villa</span><span class="en">Shoreline Villa</span></div>
+        <div class="unit-price-row">
+          <div class="unit-price"><span class="ar">من ١٦٥ م</span><span class="en">From 165M</span></div>
+          <div class="unit-price-label"><span class="ar">جنيه</span><span class="en">EGP</span></div>
+        </div>
+        <div class="unit-details">
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span class="ar">صفوف أولى وثانية وثالثة</span><span class="en">1st, 2nd, 3rd Row</span></div>
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="ar">تقسيط ٨ سنوات</span><span class="en">8-Year Installments</span></div>
+          <div class="unit-detail-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span class="ar">إطلالة مباشرة على البحر</span><span class="en">Direct Sea View</span></div>
+        </div>
+        <a href="#register" class="btn btn-gold"><span class="ar">استفسر الآن</span><span class="en">Inquire Now</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PALM HILLS -->
+<section id="why">
+  <div class="why-grid">
+    <div class="fade-in-left">
+      <span class="section-tag"><span class="ar">لماذا بالم هيلز</span><span class="en">Why Palm Hills</span></span>
+      <h2 class="section-title"><span class="ar">ربع قرن من التميز العقاري</span><span class="en">A Quarter Century of Excellence</span></h2>
+      <p class="section-sub"><span class="ar">بالم هيلز للتطوير — الاسم الأكثر ثقة في سوق العقارات المصري. أكثر من ٢٥ عامًا من التنفيذ المتواصل وتسليم المجتمعات المتكاملة.</span><span class="en">Palm Hills Developments — Egypt's most trusted real estate name. 25+ years of continuous delivery of integrated communities.</span></p>
+      <div class="why-cards">
+        <div class="why-card">
+          <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <div>
+            <div class="why-card-title"><span class="ar">قيمة استثمارية قوية</span><span class="en">Strong Investment Value</span></div>
+            <div class="why-card-text"><span class="ar">مشروعات بالم هيلز تمثل فرصة استثمارية مميزة بفضل جودة التطوير، والمواقع الواعدة، والطلب المتزايد.</span><span class="en">Palm Hills projects offer exceptional investment value through development quality, promising locations, and growing demand.</span></div>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+          <div>
+            <div class="why-card-title"><span class="ar">مجتمعات متكاملة</span><span class="en">Integrated Communities</span></div>
+            <div class="why-card-text"><span class="ar">مساحات خضراء وخدمات متنوعة ومرافق ترفيهية توفر أسلوب حياة عصري متوازن لكل أفراد الأسرة.</span><span class="en">Green spaces, diverse services, and entertainment facilities providing a modern balanced lifestyle for the whole family.</span></div>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="why-card-title"><span class="ar">مواقع استراتيجية</span><span class="en">Strategic Locations</span></div>
+            <div class="why-card-text"><span class="ar">قريب من المحاور الرئيسية والخدمات الأساسية، بمواقع حيوية عبر القاهرة والساحل والإسكندرية.</span><span class="en">Close to main roads and essential services, in prime locations across Cairo, the Coast, and Alexandria.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="company-stats">
+        <div class="c-stat"><span class="c-stat-num">50+</span><span class="c-stat-label"><span class="ar">مشروع منفّذ</span><span class="en">Projects Delivered</span></span></div>
+        <div class="c-stat"><span class="c-stat-num">37.8M</span><span class="c-stat-label"><span class="ar">م² مساحات مطورة</span><span class="en">sqm Developed</span></span></div>
+        <div class="c-stat"><span class="c-stat-num">1997</span><span class="c-stat-label"><span class="ar">سنة التأسيس</span><span class="en">Founded</span></span></div>
+        <div class="c-stat"><span class="c-stat-num">8/8</span><span class="c-stat-label"><span class="ar">مشاريع بالساحل</span><span class="en">North Coast Projects</span></span></div>
+      </div>
+    </div>
+    <div class="why-image-stack fade-in-right">
+      <div class="why-img-1">
+        <img src="https://palmhills.me/wp-content/uploads/2026/05/palm-hills-aerial-768x512.jpg" alt="Palm Hills Aerial View">
+      </div>
+      <div class="why-img-2">
+        <img src="https://palmhills.me/wp-content/uploads/2026/05/highlit-768x768.webp" alt="Palm Hills Community">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-head fade-in">
+    <span class="section-tag"><span class="ar">معرض الصور</span><span class="en">Gallery</span></span>
+    <h2 class="section-title"><span class="ar">اكتشف المشروع بالصور</span><span class="en">Discover The Project</span></h2>
+    <p class="section-sub"><span class="ar">تصفّح صور المشاريع والمجتمعات التي بنتها بالم هيلز عبر السنوات</span><span class="en">Browse images from Palm Hills' projects and communities built over the years</span></p>
+  </div>
+  <div class="gallery-grid fade-in">
+    <div class="gallery-item" onclick="openLightbox('https://palmhills.me/wp-content/uploads/2026/05/haicinda-ras-el-hekma.jpeg')">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/haicinda-ras-el-hekma.jpeg" alt="Hacienda Ras El Hekma">
+      <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-2.jpg')">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-2.jpg" alt="Hacienda Blue">
+      <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-3.jpg')">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-3.jpg" alt="Hacienda Blue">
+      <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-4.jpg')">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Blue-4.jpg" alt="Hacienda">
+      <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('https://palmhills.me/wp-content/uploads/2026/05/Hacienda-West-North-Coast-2.jpg')">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-West-North-Coast-2.jpg" alt="Hacienda West">
+      <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Waters-3-.jpg')">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/Hacienda-Waters-3-.webp" alt="Hacienda Waters">
+      <div class="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="location-grid">
+    <div class="fade-in-left">
+      <span class="section-tag"><span class="ar">الموقع</span><span class="en">Location</span></span>
+      <h2 class="section-title"><span class="ar">في قلب راس الحكمة</span><span class="en">At the Heart of Ras El Hekma</span></h2>
+      <p class="section-sub"><span class="ar">كيلو ٢٣٨ على طريق الإسكندرية–مطروح الساحلي — قريب من مطار العلمين الدولي، في أكثر وجهة متوسطية ناشئة في مصر.</span><span class="en">KM 238 on the Alexandria–Matrouh Coastal Road — near New Alamein International Airport, in Egypt's most promising Mediterranean destination.</span></div>
+      <div class="distance-list">
+        <div class="distance-item">
+          <div class="distance-km">110</div>
+          <div class="dist-dot"></div>
+          <div>
+            <div class="distance-label"><span class="ar">مدينة العلمين الجديدة</span><span class="en">New Alamein City</span></div>
+            <div class="distance-sub">km</div>
+          </div>
+        </div>
+        <div class="distance-item">
+          <div class="distance-km">124</div>
+          <div class="dist-dot"></div>
+          <div>
+            <div class="distance-label"><span class="ar">مطار العلمين الدولي</span><span class="en">Alamein International Airport</span></div>
+            <div class="distance-sub">km</div>
+          </div>
+        </div>
+        <div class="distance-item">
+          <div class="distance-km">138</div>
+          <div class="dist-dot"></div>
+          <div>
+            <div class="distance-label"><span class="ar">سيدي عبد الرحمن</span><span class="en">Sidi Abd El Rahman</span></div>
+            <div class="distance-sub">km</div>
+          </div>
+        </div>
+        <div class="distance-item">
+          <div class="distance-km">165</div>
+          <div class="dist-dot"></div>
+          <div>
+            <div class="distance-label"><span class="ar">هاسيندا بلو</span><span class="en">Hacienda Blue</span></div>
+            <div class="distance-sub">km</div>
+          </div>
+        </div>
+        <div class="distance-item" style="background:var(--blue-1);border-right:3px solid var(--blue-4)">
+          <div class="distance-km" style="color:var(--blue-6)">238</div>
+          <div class="dist-dot" style="background:var(--blue-5)"></div>
+          <div>
+            <div class="distance-label" style="color:var(--navy);font-weight:800"><span class="ar">📍 هاسيندا راس الحكمة</span><span class="en">📍 Hacienda Ras El Hekma</span></div>
+            <div class="distance-sub"><span class="ar">موقع المشروع</span><span class="en">Project Location</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="location-map-wrap fade-in-right">
+      <div class="map-placeholder">
+        <img src="https://palmhills.me/wp-content/uploads/2026/05/360_F_481731664_nT7lCqbRNRq0Bpr7CEZTclWIqBSxZxDQ.jpg" alt="North Coast Map">
+        <div class="map-pin-overlay">
+          <div class="map-pin">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span class="ar">راس الحكمة · كيلو ٢٣٨</span><span class="en">Ras El Hekma · KM 238</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS MAP -->
+<section id="projects-map">
+  <div class="pm-inner fade-in">
+    <div>
+      <span class="section-tag"><span class="ar">خريطة المشاريع</span><span class="en">Projects Map</span></span>
+      <h2 class="section-title" style="margin-bottom:24px"><span class="ar">مشاريع بالم هيلز عبر مصر</span><span class="en">Palm Hills Projects Across Egypt</span></h2>
+      <div class="pm-map"><img src="https://palmhills.me/wp-content/uploads/2026/05/palm-hills-map-1024x1017.png" alt="Palm Hills Map"></div>
+    </div>
+    <div class="pm-regions" style="padding-top:60px">
+      <div>
+        <div class="pm-region-title"><span class="ar">🌊 الساحل الشمالي</span><span class="en">🌊 North Coast</span></div>
+        <div class="pm-region-list">
+          <span class="pm-tag"><span class="ar">هاسيندا راس الحكمة ✨</span><span class="en">Hacienda Ras El Hekma ✨</span></span>
+          <span class="pm-tag"><span class="ar">هاسيندا باي</span><span class="en">Hacienda Bay</span></span>
+          <span class="pm-tag"><span class="ar">هاسيندا بلو</span><span class="en">Hacienda Blue</span></span>
+          <span class="pm-tag"><span class="ar">هاسيندا ووترز</span><span class="en">Hacienda Waters</span></span>
+          <span class="pm-tag"><span class="ar">هاسيندا وايت</span><span class="en">Hacienda White</span></span>
+          <span class="pm-tag"><span class="ar">بالم هيلز الإسكندرية</span><span class="en">Palm Hills Alexandria</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="pm-region-title"><span class="ar">🏙️ شرق القاهرة</span><span class="en">🏙️ East Cairo</span></div>
+        <div class="pm-region-list">
+          <span class="pm-tag"><span class="ar">بالم هيلز القاهرة الجديدة</span><span class="en">Palm Hills New Cairo</span></span>
+          <span class="pm-tag">97 Hills</span>
+          <span class="pm-tag"><span class="ar">فيلدج دي لا كابيتال</span><span class="en">Village De La Capitale</span></span>
+          <span class="pm-tag"><span class="ar">ذا فيلدج</span><span class="en">The Village</span></span>
+        </div>
+      </div>
+      <div>
+        <div class="pm-region-title"><span class="ar">🌆 غرب القاهرة</span><span class="en">🌆 West Cairo</span></div>
+        <div class="pm-region-list">
+          <span class="pm-tag">Badya</span>
+          <span class="pm-tag">PX</span>
+          <span class="pm-tag">Jirian</span>
+          <span class="pm-tag"><span class="ar">باديا</span><span class="en">Badya City</span></span>
+          <span class="pm-tag"><span class="ar">جولف فيوز</span><span class="en">Golf Views</span></span>
+          <span class="pm-tag"><span class="ar">ريتز كارلتون ريزيدنسز</span><span class="en">Ritz Carlton Residences</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER FORM -->
+<section id="register">
+  <div class="register-grid">
+    <div class="register-text fade-in-left">
+      <span class="section-tag"><span class="ar">تواصل معنا</span><span class="en">Contact Us</span></span>
+      <h2 class="section-title"><span class="ar">سجّل اهتمامك الآن</span><span class="en">Register Your Interest Now</span></h2>
+      <p class="section-sub"><span class="ar">فريق المبيعات متاح من ٩ صباحًا حتى ١١ مساءً — احجز معاينة، استلم البروشور الكامل، أو اعرف الأسعار الحقيقية.</span><span class="en">Sales team available from 9 AM to 11 PM — book a viewing, receive the full brochure, or get real pricing. All free, no obligation.</span></p>
+      <div class="register-features">
+        <div class="reg-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span class="ar">رد في خلال ٥ دقايق</span><span class="en">Response within 5 minutes</span></div>
+        <div class="reg-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span class="ar">بياناتك سرية ١٠٠٪</span><span class="en">Your data is 100% confidential</span></div>
+        <div class="reg-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span class="ar">استشارة مجانية بدون التزام</span><span class="en">Free consultation, no commitment</span></div>
+        <div class="reg-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span class="ar">فريق مبيعات معتمد من بالم هيلز</span><span class="en">Palm Hills authorized sales team</span></div>
+      </div>
+      <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
+        <a href="tel:+201068439196" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          01068439196
+        </a>
+        <a href="https://wa.me/201068439196" target="_blank" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span class="ar">واتساب</span><span class="en">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+    <div class="register-form fade-in-right">
+      <form id="mainForm" onsubmit="submitForm(event,'mainFormSuccess')">
+        <div class="form-row">
+          <div class="form-field">
+            <label><span class="ar">الاسم الأول *</span><span class="en">First Name *</span></label>
+            <input type="text" required>
+          </div>
+          <div class="form-field">
+            <label><span class="ar">الاسم الأخير</span><span class="en">Last Name</span></label>
+            <input type="text">
+          </div>
+        </div>
+        <div class="form-field">
+          <label><span class="ar">رقم الموبايل *</span><span class="en">Phone Number *</span></label>
+          <input type="tel" placeholder="01xxxxxxxxx" required>
+        </div>
+        <div class="form-field">
+          <label><span class="ar">البريد الإلكتروني</span><span class="en">Email Address</span></label>
+          <input type="email">
+        </div>
+        <div class="form-field">
+          <label><span class="ar">نوع الوحدة</span><span class="en">Unit Type</span></label>
+          <select>
+            <option value=""><span class="ar">اختر نوع الوحدة</span><span class="en">Select Unit Type</span></option>
+            <option>Apartment / Beach Home</option>
+            <option>Chalet Junior</option>
+            <option>Chalet Senior</option>
+            <option>Twin House</option>
+            <option>Villa</option>
+            <option>Shoreline Villa</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label><span class="ar">الميزانية التقريبية</span><span class="en">Approximate Budget</span></label>
+          <select>
+            <option value=""><span class="ar">اختر الميزانية</span><span class="en">Select Budget</span></option>
+            <option><span class="ar">١٠ – ٢٠ مليون جنيه</span><span class="en">10–20M EGP</span></option>
+            <option><span class="ar">٢٠ – ٥٠ مليون جنيه</span><span class="en">20–50M EGP</span></option>
+            <option><span class="ar">٥٠ – ١٠٠ مليون جنيه</span><span class="en">50–100M EGP</span></option>
+            <option><span class="ar">أكثر من ١٠٠ مليون جنيه</span><span class="en">100M+ EGP</span></option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <span class="ar">🚀 سجّل واحصل على موقع مميز</span><span class="en">🚀 Register for Priority Placement</span>
+        </button>
+      </form>
+      <div class="success-msg" id="mainFormSuccess">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span class="ar">تم استلام طلبك! سيتواصل معك فريقنا خلال ٥ دقائق.</span><span class="en">Your request was received! Our team will contact you within 5 minutes.</span>
+      </div>
+      <p class="form-footer-note"><span class="ar">بياناتك سرية تمامًا · لن يتم مشاركتها مع أي طرف ثالث</span><span class="en">Your data is completely confidential · Will not be shared with third parties</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="https://palmhills.me/wp-content/uploads/2026/05/logoAr-1024x263.png" alt="Palm Hills Logo">
+      <p class="ar">بالم هيلز للتطوير العقاري — الشركة الرائدة في مصر بخبرة تزيد على ٢٥ عامًا في تطوير المجتمعات السكنية المتكاملة عبر أهم المواقع في مصر.</p>
+      <p class="en">Palm Hills Developments — Egypt's leading real estate developer with 25+ years of experience creating integrated residential communities in Egypt's prime locations.</p>
+      <div class="footer-contact">
+        <a href="tel:+201068439196">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          01068439196
+        </a>
+        <a href="https://wa.me/201068439196" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span class="ar">تواصل عبر واتساب</span><span class="en">WhatsApp Us</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4><span class="ar">روابط سريعة</span><span class="en">Quick Links</span></h4>
+      <ul class="footer-links">
+        <li><a href="#about-project"><span class="ar">عن المشروع</span><span class="en">About Project</span></a></li>
+        <li><a href="#pricing"><span class="ar">الأسعار والوحدات</span><span class="en">Prices & Units</span></a></li>
+        <li><a href="#why"><span class="ar">لماذا بالم هيلز</span><span class="en">Why Palm Hills</span></a></li>
+        <li><a href="#gallery"><span class="ar">معرض الصور</span><span class="en">Gallery</span></a></li>
+        <li><a href="#location"><span class="ar">الموقع</span><span class="en">Location</span></a></li>
+        <li><a href="#register"><span class="ar">تواصل معنا</span><span class="en">Contact Us</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4><span class="ar">المشاريع</span><span class="en">Projects</span></h4>
+      <ul class="footer-links">
+        <li><a href="#"><span class="ar">هاسيندا راس الحكمة</span><span class="en">Hacienda Ras El Hekma</span></a></li>
+        <li><a href="#">Hacienda Blue</a></li>
+        <li><a href="#">Hacienda Waters</a></li>
+        <li><a href="#"><span class="ar">بالم هيلز الإسكندرية</span><span class="en">Palm Hills Alexandria</span></a></li>
+        <li><a href="#">97 Hills</a></li>
+        <li><a href="#">Badya</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p><span class="ar">© ٢٠٢٦ بالم هيلز — جميع الحقوق محفوظة · الأسعار للاسترشاد وقابلة للتغيير</span><span class="en">© 2026 Palm Hills — All Rights Reserved · Prices are indicative and subject to change</span></p>
+    <div class="footer-social">
+      <a href="https://wa.me/201068439196" class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+      </a>
+      <a href="tel:+201068439196" class="social-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<div class="float-cta">
+  <a href="https://wa.me/201068439196" class="float-btn float-wa" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="ar">واتساب</span><span class="en">WhatsApp</span>
+  </a>
+  <a href="tel:+201068439196" class="float-btn float-call">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    01068439196
+  </a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+// ─── LANGUAGE TOGGLE ───
+function toggleLang(){
+  const html=document.documentElement;
+  const isAr=html.getAttribute('data-lang')==='ar';
+  html.setAttribute('data-lang',isAr?'en':'ar');
+  html.setAttribute('lang',isAr?'en':'ar');
+  html.setAttribute('dir',isAr?'ltr':'rtl');
+  document.getElementById('langToggle').textContent=isAr?'ع':'EN';
+  const logo=document.getElementById('nav-logo-img');
+  logo.src=isAr
+    ?'https://palmhills.me/wp-content/uploads/2026/05/logo_dark1.png'
+    :'https://palmhills.me/wp-content/uploads/2026/05/logo_dark1.png';
+}
+
+// ─── NAV SCROLL ───
+window.addEventListener('scroll',()=>{
+  const nav=document.getElementById('nav');
+  nav.classList.toggle('scrolled',window.scrollY>60);
+});
+
+// ─── MENU ───
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('navLinks').classList.remove('open');
+}
+
+// ─── FORM SUBMIT ───
+function submitForm(e,successId){
+  e.preventDefault();
+  const form=e.target;
+  form.style.display='none';
+  document.getElementById(successId).style.display='block';
+}
+
+// ─── LIGHTBOX ───
+function openLightbox(src){
+  document.getElementById('lightboxImg').src=src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(e){
+  if(e.target===document.getElementById('lightbox')){
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow='';
+  }
+}
+
+// ─── SCROLL ANIMATIONS ───
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible')}
+  });
+},{threshold:0.12});
+document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right').forEach(el=>observer.observe(el));
+
+// ─── COUNTER ANIMATION ───
+function animateCounter(el,target,suffix=''){
+  let start=0;
+  const step=target/60;
+  const timer=setInterval(()=>{
+    start=Math.min(start+step,target);
+    el.textContent=Math.floor(start).toLocaleString()+(suffix||'');
+    if(start>=target)clearInterval(timer);
+  },25);
+}
+</script>
+</body>
+</html>
